@@ -5,7 +5,7 @@ function getAbsolutePath(value) {
 }
 
 const config = {
-  stories: ['../stories/*.stories.tsx', '../stories/**/*.stories.tsx'],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('@storybook/addon-essentials'),
@@ -23,19 +23,11 @@ const config = {
     return {
       ...config,
       define: { 'process.env': {} },
-      resolve: {
-        alias: [
-          {
-            find: 'ui',
-            replacement: resolve(__dirname, '../../../packages/ui/'),
-          },
-        ],
-      },
     };
   },
 
   docs: {
-    autodocs: true,
+    autodocs: 'tag',
   },
 };
 
