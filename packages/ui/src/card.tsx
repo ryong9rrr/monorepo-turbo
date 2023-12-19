@@ -1,8 +1,8 @@
 export interface CardProps {
-  className?: string
-  title: string
-  children: React.ReactNode
-  href: string
+  className?: string;
+  title: string;
+  children: React.ReactNode;
+  href: string;
 }
 
 export function Card({ className, title, children, href }: CardProps): JSX.Element {
@@ -18,5 +18,5 @@ export function Card({ className, title, children, href }: CardProps): JSX.Eleme
       </h2>
       <p>{children}</p>
     </a>
-  )
+  );
 }
