@@ -11,11 +11,20 @@ jobs:
     # The list of steps that the action will go through
     steps:
       - uses: actions/checkout@v1
-      - run: npm install -g pnpm
-        #👇 Adds Chromatic as a step in the workflow
-      - uses: chromaui/action@v1
-        # Options required for Chromatic's GitHub Action
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
         with:
-          #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/design-systems-for-developers/react/ko/review/ to obtain it
+          version: 8
+          run_install: false
+
+      #👇 Adds Chromatic as a step in the workflow
+      - name: Publish Chromatic
+        id: chromatic
+        uses: chromaui/action@v1
+        with:
+          # Options required for Chromatic's GitHub Action
+          workingDir: packages/ui
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
