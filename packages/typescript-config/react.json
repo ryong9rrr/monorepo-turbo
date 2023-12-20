@@ -1,0 +1,8 @@
+{
+  "display": "react",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "jsx": "react-jsx"
+  }
+}
