@@ -13,7 +13,7 @@ export function Button({ children, className, appName }: ButtonProps): JSX.Eleme
     <button
       className={className}
       onClick={() => {
-        alert(`Hello from your ${appName} app!!!!!`);
+        alert(`Hello from your ${appName} app!!!!!!`);
       }}
       type="button"
     >
