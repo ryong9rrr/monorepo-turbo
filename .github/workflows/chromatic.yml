@@ -25,6 +25,6 @@ jobs:
         uses: chromaui/action@v1
         with:
           # Options required for Chromatic's GitHub Action
-          workingDir: packages/ui
+          workingDir: packages/ui/src
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
