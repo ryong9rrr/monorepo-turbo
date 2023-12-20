@@ -21,7 +21,7 @@ module.exports = {
     'eslint-config-prettier',
     'plugin:react/recommended',
   ],
-  plugins: ['@typescript-eslint', 'import', 'prettier', 'react', 'react-hooks'],
+  plugins: ['@typescript-eslint', 'import', 'prettier', 'react', 'react-hooks', 'react-refresh'],
   parser: '@typescript-eslint/parser',
   globals: {
     React: true,
