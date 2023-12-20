@@ -19,6 +19,10 @@ jobs:
           version: 8
           run_install: false
 
+      - name: Install Dependency
+        run: pnpm install -no-frozen-lockfile
+        working-directory: packages/ui
+
       #👇 Adds Chromatic as a step in the workflow
       - name: Publish Chromatic
         id: chromatic
