@@ -10,4 +10,4 @@ module.exports = {
   singleQuote: true,
   useTabs: false,
   endOfLine: 'auto',
-}
+};

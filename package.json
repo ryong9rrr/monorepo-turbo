@@ -4,8 +4,9 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,md}\"",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "pnpm run prettier && pnpm run lint",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo run build --filter=docs^... && changeset publish"
