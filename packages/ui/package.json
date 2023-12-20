@@ -18,7 +18,7 @@
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "build-storybook": "storybook build --docs",
-    "release:storybook": "npx chromatic --project-token=<project-token>"
+    "chromatic": "npx chromatic --exit-zero-on-changes -d storybook-static/"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
