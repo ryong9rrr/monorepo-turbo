@@ -13,11 +13,12 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --external react",
-    "build:storybook": "storybook build --docs",
     "preview:storybook": "serve storybook-static",
     "dev": "storybook dev -p 6006 --no-open",
     "lint": "eslint . --max-warnings 0",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "build-storybook": "storybook build --docs",
+    "release:storybook": "npx chromatic --project-token=<project-token>"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -37,6 +38,7 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@vitejs/plugin-react": "^4.2.0",
+    "chromatic": "^10.1.0",
     "eslint": "^8.53.0",
     "jsx-runtime": "link:@emotion/react/jsx-runtime",
     "serve": "^14.2.1",
@@ -49,5 +51,7 @@
     "access": "public"
   },
   "sideEffects": false,
-  "license": "MIT"
+  "license": "MIT",
+  "readme": "ERROR: No README data found!",
+  "_id": "@repo/ui@0.0.0"
 }
