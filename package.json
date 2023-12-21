@@ -2,14 +2,15 @@
   "name": "monorepo-turbo",
   "private": true,
   "scripts": {
-    "build-storybook": "turbo run build-storybook --filter=@repo/ui",
-    "build": "turbo build",
-    "dev": "turbo dev",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,md}\"",
     "lint": "turbo lint",
     "format": "pnpm run prettier && pnpm run lint",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
+    "build-storybook": "turbo run build-storybook --filter=@repo/ui",
+    "test": "turbo test",
+    "build": "turbo build",
+    "dev": "turbo dev",
     "release": "turbo run build --filter=docs^... && changeset publish"
   },
   "devDependencies": {
