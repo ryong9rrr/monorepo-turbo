@@ -2,6 +2,7 @@
   "name": "monorepo-turbo",
   "private": true,
   "scripts": {
+    "postinstall": "husky install",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,md}\"",
@@ -17,6 +18,7 @@
     "@changesets/cli": "^2.27.1",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "husky": "^8.0.3",
     "prettier": "^3.1.0",
     "turbo": "latest"
   },
