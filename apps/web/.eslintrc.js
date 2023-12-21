@@ -4,4 +4,5 @@ module.exports = {
   parserOptions: {
     project: true,
   },
+  ignorePatterns: ['jest.config.js', 'jest.setup.js'],
 };
