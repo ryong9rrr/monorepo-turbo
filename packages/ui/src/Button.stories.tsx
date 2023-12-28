@@ -16,13 +16,9 @@ type Story = StoryObj<typeof Button>;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-  render: props => (
-    <Button {...props} appName="Turborepo">
-      Hello
-    </Button>
-  ),
+  render: props => <Button {...props} />,
   name: 'Button',
   args: {
-    children: 'Hello',
+    children: 'Button',
   },
 };

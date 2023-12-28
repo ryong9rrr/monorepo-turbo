@@ -1,23 +1,22 @@
 'use client';
 
-import { type ReactNode } from 'react';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 
-export interface ButtonProps {
-  children: ReactNode;
-  className?: string;
-  appName: string;
-}
+const buttonStyles = css`
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+`;
 
-export function Button({ children, className, appName }: ButtonProps): JSX.Element {
-  return (
-    <button
-      className={className}
-      onClick={() => {
-        alert(`Hello from your ${appName} app!!!!!!~`);
-      }}
-      type="button"
-    >
-      {children}
-    </button>
-  );
-}
+export const Button = styled.button`
+  ${buttonStyles};
+  background-color: #3498db;
+  color: #fff;
+
+  &:hover {
+    background-color: #2980b9;
+  }
+`;
