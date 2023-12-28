@@ -6,6 +6,6 @@ describe('Page', () => {
   test('renders button', () => {
     render(<Page />);
 
-    screen.getByText('Click me!');
+    screen.getByText('Click Me!');
   });
 });
