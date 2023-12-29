@@ -2,6 +2,7 @@
   "name": "monorepo-turbo",
   "private": true,
   "scripts": {
+    "graph": "turbo build --graph",
     "postinstall": "husky install",
     "changeset": "changeset",
     "version-packages": "changeset version",
